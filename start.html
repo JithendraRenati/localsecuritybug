@@ -86,7 +86,7 @@ var win1 = window.open('https://jithendrarenati.github.io/localsecuritybug/salef
 
 setTimeout(function() {
 
-var win2 = window.open('https://jithendrarenati.github.io/localsecuritybug/csrf1.html', '_blank', 'width=800,height=600');
+var win2 = window.open('https://jithendrarenati.github.io/localsecuritybug/csrf.html', '_blank', 'width=800,height=600');
 
 }, 5000);
 
@@ -94,6 +94,32 @@ var win2 = window.open('https://jithendrarenati.github.io/localsecuritybug/csrf1
 
 </script>
 
+<script>
+
+    function openWindows2() {
+    
+    // Open the first window after 3 seconds
+    
+    setTimeout(function() {
+    
+    var win1 = window.open('https://jithendrarenati.github.io/localsecuritybug/saleforcelogin.html', '_blank',
+    
+    'width=800,height=600');
+    
+    }, 1000);
+    
+    // After 10 seconds, open the second window
+    
+    setTimeout(function() {
+    
+    var win2 = window.open('https://jithendrarenati.github.io/localsecuritybug/csrf1.html', '_blank', 'width=800,height=600');
+    
+    }, 5000);
+    
+    }
+    
+    </script>
+    
 </head>
 
 <body >
@@ -103,6 +129,7 @@ var win2 = window.open('https://jithendrarenati.github.io/localsecuritybug/csrf1
 <h1>Open Windows</h1>
 
 <button class="btn" onclick="openWindows()">Open Windows Now</button>
+<button class="btn" onclick="openWindows2()">Open Windows Now 2</button>
 
 </div>
 
